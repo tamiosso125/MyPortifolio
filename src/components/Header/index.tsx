@@ -1,9 +1,15 @@
+import NavLink from './NavLink';
 import { Container } from './styles';
 
-export default function Header() {
+function Header() {
   return (
     <Container>
-      <h1>Header</h1>
+      <ul>
+        <NavLink title="Home" path="/" includes={false} />
+        <NavLink title="Projetos" path="/projetos" includes />
+      </ul>
     </Container>
   );
 }
+
+export default Header;
